@@ -42,7 +42,7 @@ class ExtractingTextApp(MDApp):
         if path.lower().endswith(('.jpg', '.png', '.jpeg')):
             self.file_manager.close()
             self.image_file = path
-            location_text = " ..... " + "Selected location:..." + self.image_file + " ..... "
+            location_text = " ..... " + "Selected location:... " + self.image_file + " ..... "
             self.location_label.text = location_text
             self.extract_button.disabled = False
             self.choose_button.disabled = False
@@ -63,7 +63,6 @@ class ExtractingTextApp(MDApp):
             self.image_text.text = text
             if text != "":
                 self.location_label.text = "...... Text extracted successfully! ....... "
-                print(text)
             else:
                 self.location_label.text = ".......  No text on the image or Text extraction failed!   .... "
 
